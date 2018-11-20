@@ -1,4 +1,4 @@
-.profil{
+.add{
   color: get($colors, font);
   height: 100%;
   font-size: 20px;
@@ -18,9 +18,5 @@
     @include media(small){
       font-size: 28px;
     }
-  }
-  &__text{
-    margin-bottom: 40px;
-
   }
 }

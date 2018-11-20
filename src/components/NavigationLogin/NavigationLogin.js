@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import { BrowserRouter as  Route, Link } from "react-router-dom";
 
-class Navigation extends Component {
+class NavigationLogin extends Component {
   render(){
     return(
       <div className="navigation">
@@ -14,9 +14,14 @@ class Navigation extends Component {
             <li className="navbar__item ">
               <Link className="navbar__link" to="/about">About</Link>
             </li>
-
             <li className="navbar__item ">
-              <a href="javascript:void(0)" className="navbar__login"><i className="fab fa-github icon icon--github"></i>Log in</a>
+              <Link className="navbar__link" to="/Myprofil">My profil</Link>
+            </li>
+            <li className="navbar__item ">
+              <Link className="navbar__link" to="/Add">Add</Link>
+            </li>
+            <li className="navbar__item ">
+              <a href="javascript:void(0)" className="navbar__logout"><i className="fa fa-sign-out icon--logout"></i>Log out</a>
             </li>
           </ul>
         </nav>
@@ -26,4 +31,4 @@ class Navigation extends Component {
   }
 }
 
-export default Navigation;
+export default NavigationLogin;

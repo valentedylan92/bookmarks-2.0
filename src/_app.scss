@@ -16,7 +16,7 @@
     height: calc(100vh + 10px);
     overflow-y: scroll;
     @include media(small){
-      padding: 40px;
+      padding: 30px;
     }
   }
 }

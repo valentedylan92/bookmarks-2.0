@@ -1,7 +1,8 @@
 import React, {Component} from 'react';
-import { Form,Card, Button,Tag,Image } from "react-bulma-components/full";
+import { Form,Card, Button } from "react-bulma-components/full";
+import Article from "../Article/Article";
+
 import {articles} from '../../fakedata';
-import Article from '../Article/Article';
 import cat from '../../assets/img/cat.gif';
 import asian from '../../assets/img/asian.gif';
 import dance from '../../assets/img/dance.gif';
@@ -17,15 +18,30 @@ class Page extends Component {
           searchKeywords: "",
           data: [],
           tags: [],
+          result: [],
           gifs:
-        [
-          cat,
-          sailor,
-          dance,
-          glasses,
-          asian
-
-        ],
+                [
+                  {
+                    alt:"Not found gif - Cat",
+                    src:cat
+                  },
+                  {
+                    alt:"Not found gif - Sailor",
+                    src:sailor
+                  },
+                  {
+                    alt:"Not found gif - Dance",
+                    src:dance
+                  },
+                  {
+                    alt:"Not found gif - Glasses",
+                    src:glasses
+                  },
+                  {
+                    alt:"Not found gif - Asian",
+                    src:asian
+                  }
+                ],
       }
   }
 
@@ -105,33 +121,35 @@ class Page extends Component {
       })
     }
 
+
     if(filterTag.length === 0){
       let size = this.state.gifs.length
       let x = Math.floor(size*Math.random())
       return <div className="page__gifs">
               <p className="page__unfound">No Result found. </p>
-              <img  className="page__gif" src={this.state.gifs[x]} />
+              <img alt={this.state.gifs[x].alt}  className="page__gif" src={this.state.gifs[x].src} />
              </div>
     }
 
     else{
+
      const listArticles = filterTag.map((article,index) =>{
         return(
           <Card
           className="article"
           key={index}
           >
-            <div className="article__content">
-              <h4 className="article__title"><a rel="noopener noreferrer" target="_blank" href={article.url} className="article__link">{article.title}</a></h4>
-              <p className="article__description">{article.description}</p>
-            </div>
+            <Article
+              article={article}
+              key={index}
+            />
             <div className="article__tags">
+              <p className="tags__title">Tags : </p>
               <ul className="tags">
-              <li className="tags__title">Tags : </li>
 
                 {article.tags.map((tag,i) =>  {
                   return <li key={i} className="tags__item">
-                  <Button onClick={()=>this.loadTagContent({tag})} value={tag} className="tags__link">{tag}</Button>
+                  <Button onClick={()=>this.loadTagContent({tag})} value={tag} className="tags__linking">{tag}</Button>
                   </li>
                 })}
               </ul>
@@ -140,7 +158,9 @@ class Page extends Component {
         )
       })
     return listArticles;
+
     }
+
   }
 
   render(){
@@ -165,10 +185,11 @@ class Page extends Component {
               </Button>
           </form>
           <div className="page__tags">
-          <ul className="tags">
-          {this.renderTag()}
-          </ul>
+            <ul className="tags">
+            {this.renderTag()}
+            </ul>
           </div>
+          {this.renderContent().length > 0 ? <h3 className="article__results">{this.renderContent().length} results found.</h3> : "" }
           <div className="article__container">
             {this.renderContent()}
           </div>

@@ -12,7 +12,7 @@ class About extends Component {
           <h3 className="about__subtitle">Team</h3>
           <ul className="about__credits">
             <li className="about__item">Back-End: <a className="about__link" rel="noopener noreferrer" href="https://github.com/RomainVandevoorde/" target="_blank">Romain Vandevoorde</a></li>
-            <li className="about__item">Design &amp; UX: <a className="about__link" rel="noopener noreferrer" href="https://github.com/pedroseromenho" target="_blank">Pedro Seromenho</a></li>
+            <li className="about__item">Design &amp; UX: <a className="about__link" rel="noopener noreferrer" href="https://github.com/pedroseromenho" target="_blank">Pedro Seromenho</a>  <span className="divider">-</span>  <a className=" break about__link" rel="noopener noreferrer" href="https://github.com/valentedylan92" target="_blank">Dylan Valente</a></li>
             <li className="about__item">AJAX: <a className="about__link" rel="noopener noreferrer" href="https://github.com/tahrimostapha/" target="_blank">Mostapha Tahri</a></li>
           </ul>
           <h3 className="about__subtitle">Technologies</h3>
@@ -22,6 +22,7 @@ class About extends Component {
             <li className="about__item" >Social Connection package : <a className="about__link" rel="noopener noreferrer" href="https://laravel.com/docs/5.5/socialite" target="_blank">Laravel Socialite</a></li>
             <li className="about__item" >Dependencies Manager : <a className="about__link" rel="noopener noreferrer" href="https://getcomposer.org/" target="_blank">Composer</a></li>
             <li className="about__item" >Framework CSS : <a className="about__link" rel="noopener noreferrer" href="https://bulma.io/" target="_blank">Bulma</a></li>
+            <li className="about__item" >Framework JS : <a className="about__link" rel="noopener noreferrer" href="https://reactjs.org/" target="_blank">React</a></li>
             <li className="about__item" >Icons : <a className="about__link" rel="noopener noreferrer" href="https://fontawesome.com/" target="_blank">FontAwesome</a></li>
           </ul>
         </div>

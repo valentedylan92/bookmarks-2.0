@@ -54,15 +54,26 @@
     font-size: 20px;
     margin-bottom: 10px;
     padding-left: 15px;
-    @include flex($justify:space-between);
+    @include flex();
     @include media(small){
       font-size: 16px;
+    }
+    a{
     }
   }
 
   &__link{
+    margin-left: auto;
     color: get($colors,primary);
   }
 
 
+}
+
+.break{
+  margin-left: 0
+}
+
+.divider{
+  margin: 0 10px
 }

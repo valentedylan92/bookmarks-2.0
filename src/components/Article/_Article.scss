@@ -1,23 +1,46 @@
 .article{
-  max-width: 500px;
-  margin: 10px 0;
+  max-width: 300px;
+  margin: 0 0 15px 0;
   width: 100%;
 
   &__content{
-    padding: 20px;
+    padding: 10px 20px;
+  }
+
+  &__button{
+    all: unset;
+    cursor: pointer;
+  }
+
+  &__results{
+    text-align: right;
+    font-weight: bold;
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  &__favori{
+    @include flex($justify: space-between);
+    margin-bottom: 5px;
   }
 
   &__container{
-   @include flex($justify: space-between);
+   @include flex($justify: space-around);
+   width: 100%;
+   max-width: 700px;
+   margin: auto;
    flex-wrap: wrap;
   }
 
+  &__img{
+    width: 100%;
+  }
+
   &__title{
-    font-size: 25px;
+    font-size: 20px;
+    line-height: 1;
     font-weight: bold;
-    margin-bottom: 10px;
     @include media(small){
-      font-size: 20px;
+      font-size: 16px;
     }
   }
 
@@ -33,16 +56,36 @@
     }
   }
 
+  &__description{
+    font-size: 15px;
+    @include media(small){
+      font-size: 12px;
+    }
+  }
+
   &__tags{
     background-color: get($colors,secondary);
-    padding: 20px
+    padding: 10px 20px
   }
 }
 
 .tags{
+  margin-bottom: 10px !important;
   &__title{
-    font-size: 15px;
+    font-size: 12px;
     font-weight: bold;
+  }
+  &__linking{
+    @include button(white,get($colors,primary),0,10px,$radius:4px);
+    display: inline-flex;
+    font-size: 10px;
+    justify-content: center;
+    margin:  10px 10px 0 0;
+
+    white-space: nowrap;
+    &:hover{
+      color: white;
+    }
   }
   &__link{
     @include button(white,get($colors,primary),5px,10px,$radius:4px);
@@ -50,6 +93,7 @@
     font-size: 12px;
     justify-content: center;
     margin:  10px 0 0 10px;
+
     white-space: nowrap;
     &:hover{
       color: white;
@@ -65,7 +109,7 @@
     border : 0;
     box-sizing: border-box;
     margin:  10px 0 0 10px;
-    
+
     transition: background ease .5s;
     &:active,&:focus{
       border-width: 0;
@@ -79,4 +123,9 @@
         color: white;
     }
   }
+}
+
+
+.favoriIcon {
+    color: #eab30c;
 }
