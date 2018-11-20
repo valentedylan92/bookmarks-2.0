@@ -1,0 +1,68 @@
+.about{
+  color: get($colors, font);
+  height: 100%;
+  font-size: 20px;
+  @include flex($direction: column);
+  @include media(small){
+    font-size: 16px;
+  }
+
+  &__title{
+    font-weight: bold;
+    width:100%;
+    font-size: 35px;
+    text-align: left;
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+    margin-bottom: 50px;
+    @include media(small){
+      font-size: 28px;
+    }
+  }
+  &__text{
+    margin-bottom: 40px;
+
+  }
+  &__feedback{
+    font-weight: bold;
+    margin-bottom: 40px;
+
+  }
+
+  &__subtitle{
+    font-weight: bold;
+    font-size: 25px;
+    margin-bottom: 30px;
+    @include media(small){
+      font-size: 20px;
+    }
+
+  }
+
+  &__credits{
+    width: 100%;
+    max-width: 600px;
+    font-size: 20px;
+    margin-bottom: 40px;
+    @include media(small){
+      font-size: 16px;
+    }
+
+  }
+
+  &__item{
+    font-size: 20px;
+    margin-bottom: 10px;
+    padding-left: 15px;
+    @include flex($justify:space-between);
+    @include media(small){
+      font-size: 16px;
+    }
+  }
+
+  &__link{
+    color: get($colors,primary);
+  }
+
+
+}

@@ -1,0 +1,22 @@
+.app{
+  height: 100vh;
+  &__left{
+    height: 100vh;
+    padding: 50px;
+    @include media(small){
+      padding: 40px;
+    }
+
+  }
+  &__right{
+    background-color: get($colors,secondary);
+    box-shadow: -4px 0px 20px 0px #A9A9A9;
+    z-index: 10;
+    padding: 50px;
+    height: calc(100vh + 10px);
+    overflow-y: scroll;
+    @include media(small){
+      padding: 40px;
+    }
+  }
+}

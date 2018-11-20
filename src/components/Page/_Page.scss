@@ -1,0 +1,76 @@
+.page{
+
+    &__title{
+      font-size: 35px;
+    }
+    &__input{
+      all:unset;
+      font-weight: bold;
+      width:100%;
+      font-size: 35px;
+      font-family: sans-serif;
+      text-align: left;
+      padding-bottom: 20px;
+      border-bottom: 1px solid black;
+      &:active,&:focus{
+        box-shadow: none;
+        border:0;
+        border-bottom: 1px solid black;
+      }
+    }
+    &__submit{
+      border-radius: 100%;
+      color: white;
+      background-color: get($colors,primary);
+      border : 0;
+      height: 45px;
+      min-width: 45px;
+      box-sizing: border-box;
+      transition: background ease .5s;
+      &:active,&:focus{
+        border-width: 0;
+        box-shadow: none;
+
+        color: white;
+      }
+
+      &:hover{
+          background-color:darken(get($colors,primary), 10%);
+          color: white;
+      }
+    }
+
+    &__form{
+      @include flex();
+    }
+    &__tags{
+      margin: 10px 0;
+    }
+
+    &__gifs{
+      height: 600px;
+      width: 600px;
+      @include center-flex();
+      flex-direction: column;
+      margin: auto;
+    }
+    &__unfound{
+      font-size: 25px;
+      margin-bottom: 25px;
+      font-weight: bold;
+    }
+    &__gif{
+      width: 100%;
+      max-width: 500px;
+    }
+
+}
+
+.icon{
+  &--search{
+    font-size: 20px;
+  }
+  &--close{
+    font-size: 12px;
+  }
+}

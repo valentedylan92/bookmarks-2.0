@@ -1,0 +1,82 @@
+.article{
+  max-width: 500px;
+  margin: 10px 0;
+  width: 100%;
+
+  &__content{
+    padding: 20px;
+  }
+
+  &__container{
+   @include flex($justify: space-between);
+   flex-wrap: wrap;
+  }
+
+  &__title{
+    font-size: 25px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    @include media(small){
+      font-size: 20px;
+    }
+  }
+
+  &__link{
+    color: get($colors,font);
+    transition: color ease .5s;
+    font-size: 20px;
+    @include media(small){
+      font-size: 16px;
+    }
+    &:hover{
+      color: get($colors,primary);
+    }
+  }
+
+  &__tags{
+    background-color: get($colors,secondary);
+    padding: 20px
+  }
+}
+
+.tags{
+  &__title{
+    font-size: 15px;
+    font-weight: bold;
+  }
+  &__link{
+    @include button(white,get($colors,primary),5px,10px,$radius:4px);
+    display: inline-flex;
+    font-size: 12px;
+    justify-content: center;
+    margin:  10px 0 0 10px;
+    white-space: nowrap;
+    &:hover{
+      color: white;
+    }
+  }
+
+  &__close{
+    height: 30px;
+    min-width: 30px;
+    border-radius: 100%;
+    color: white;
+    background-color: get($colors,primary);
+    border : 0;
+    box-sizing: border-box;
+    margin:  10px 0 0 10px;
+    
+    transition: background ease .5s;
+    &:active,&:focus{
+      border-width: 0;
+      box-shadow: none;
+
+      color: white;
+    }
+
+    &:hover{
+        background-color:darken(get($colors,primary), 10%);
+        color: white;
+    }
+  }
+}
