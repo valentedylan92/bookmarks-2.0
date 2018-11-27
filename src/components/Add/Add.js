@@ -14,9 +14,9 @@ class Add extends Component {
 
     return(
       <div className="add">
-        <h2 className="add__title">Add</h2>
-        <form className="add__form" action="http://bookmarks-nexus.tk/bookmarks" method="post" name="form1" onsubmit="required()">
-          <input type="hidden" name="_token" value="7WnXHzfijH1wWr5z712hoEAeLNyduCiG6dNwDUOh"/>
+        <h2 className="add__title container__title">Add</h2>
+        <form className="add__form" action="http://bookmarks-nexus.tk/bookmarks" method="post" name="form1" onSubmit="required()">
+          <input readOnly type="hidden" name="_token" value="7WnXHzfijH1wWr5z712hoEAeLNyduCiG6dNwDUOh"/>
           <div className="control-container">
             <div className="control">
               <label className="label">Topic</label>
@@ -56,13 +56,13 @@ class Add extends Component {
             <div className="field">
               <label className="label">Name</label>
               <div className="control">
-                <input className="input" type="text" placeholder="ex: Bulma Framework" name="title" value=""/>
+                <input readOnly className="input" type="text" placeholder="ex: Bulma Framework" name="title" value=""/>
               </div>
                     </div>
             <div className="field">
               <label className="label">Link</label>
               <div className="control">
-                <input className="input" type="text" placeholder="ex: https://bulma.io/" name="url" value=""/>
+                <input readOnly className="input" type="text" placeholder="ex: https://bulma.io/" name="url" value=""/>
               </div>
                     </div>
             <div className="field">

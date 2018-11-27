@@ -17,7 +17,6 @@ class App extends Component {
         <Columns.Column className="app__left" size="two-fifths">
 
           <Navigation />
-          <NavigationLogin />
 
         </Columns.Column>
         <Columns.Column className="app__right" size="three-fifths">

@@ -23,35 +23,30 @@
   &__link{
     @include button (get($colors,font), white, 8px, 16px);
     border: #c3c3c3 1px solid;
-    font-size: 20px;
+    font-size: 18px;
     margin-right: 20px;
     box-sizing: border-box;
     @include media(small){
-      font-size: 16px;
+      font-size: 14.5px;
     }
   }
-  &__logout{
-    @include button (get($colors,font), get($colors,secondary), 8px, 16px);
-    border: #c3c3c3 1px solid;
-    font-size: 20px;
-    margin-right: 20px;
-    box-sizing: border-box;
-    @include media(small){
-      font-size: 16px;
+  &--logout{
+    background-color: darken(get($colors,secondary),20%);
+    &:hover{
+      background-color: darken(get($colors,secondary),30%);
     }
   }
-  &__login{
-    @include button (white, get($colors,primary), 8px, 17px);
-    box-sizing: border-box;
-
+  &--login{
+    color :white;
+    background-color: get($colors,primary);
     &:hover{
       color: white;
+      background-color: darken(get($colors,primary),10%);
     }
-    font-size: 20px;
-    @include media(small){
-      font-size: 16px;
-    }
-
-
+  }
+}
+.icon{
+  &--logout,&--github{
+    margin-right:  5px;
   }
 }

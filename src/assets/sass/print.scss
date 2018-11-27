@@ -6,7 +6,6 @@
 @import "utils/variables";
 
 // MIXINS
-
 @import "mixins/buttons";
 @import "mixins/center-flex";
 @import "mixins/container";
@@ -15,12 +14,11 @@
 @import "mixins/square";
 
 
+@import "../../components/Container/Container";
 @import "../../components/Page/Page";
 @import "../../components/Profil/Profil";
 @import "../../components/About/About";
 @import "../../components/Navigation/Navigation";
 @import "../../components/Article/Article";
-@import "../../components/Container/Container";
-@import "../../components/Container/Container";
 @import "../../components/Add/Add";
 @import "../../app";

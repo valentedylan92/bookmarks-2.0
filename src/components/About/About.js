@@ -6,7 +6,7 @@ class About extends Component {
   render(){
     return(
         <div className="about">
-          <h2 className="about__title" >About</h2>
+          <h2 className="about__title container__title" >About</h2>
           <p className="about__text" >Bookmarks is an open access web-based tool about web technologies. It was developed at <a className="about__link" rel="noopener noreferrer" href="https://www.becode.org/" target="_blank">becode</a> (coding school based in Belgium), where learners and coaches can share their resources and bookmarks.</p>
           <p className="about__feedback">Did you encounter any problem while navigating? Please send your observations and help us improve the Lovelace 2.0 using this <a className="about__link" rel="noopener noreferrer" href="https://github.com/RomainVandevoorde/Lovelace-Bookmarks/issues" target="_blank">link</a> (GitHub issues).</p>
           <h3 className="about__subtitle">Team</h3>

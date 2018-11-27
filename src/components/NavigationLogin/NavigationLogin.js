@@ -21,7 +21,7 @@ class NavigationLogin extends Component {
               <Link className="navbar__link" to="/Add">Add</Link>
             </li>
             <li className="navbar__item ">
-              <a href="javascript:void(0)" className="navbar__logout"><i className="fa fa-sign-out icon--logout"></i>Log out</a>
+              <a href="javascript:void(0)" className="navbar__link navbar--logout"><i className="fas fa-sign-out-alt icon--logout"></i>Log out</a>
             </li>
           </ul>
         </nav>

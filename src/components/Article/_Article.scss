@@ -2,6 +2,8 @@
   max-width: 300px;
   margin: 0 0 15px 0;
   width: 100%;
+  border-bottom-right-radius:5px;
+  border-bottom-left-radius:5px;
 
   &__content{
     padding: 10px 20px;
@@ -21,6 +23,11 @@
   &__favori{
     @include flex($justify: space-between);
     margin-bottom: 5px;
+    @include media(small){
+      justify-content: flex-end;
+      align-items: center;
+      margin-bottom: 10px;
+    }
   }
 
   &__container{
@@ -33,6 +40,19 @@
 
   &__img{
     width: 100%;
+    @include media(small){
+      display: none;
+    }
+
+    &--mobile{
+      display: none;
+      @include media(small){
+        max-width: 50px;
+        border-radius: 100%;
+        margin-right:  auto;
+        display: block;
+      }
+    }
   }
 
   &__title{
@@ -41,6 +61,7 @@
     font-weight: bold;
     @include media(small){
       font-size: 16px;
+      margin-right: 10px;
     }
   }
 
@@ -65,7 +86,10 @@
 
   &__tags{
     background-color: get($colors,secondary);
-    padding: 10px 20px
+    padding: 10px 20px;
+    border-bottom-right-radius:5px;
+    border-bottom-left-radius:5px;
+
   }
 }
 
@@ -81,7 +105,6 @@
     font-size: 10px;
     justify-content: center;
     margin:  10px 10px 0 0;
-
     white-space: nowrap;
     &:hover{
       color: white;
@@ -93,7 +116,6 @@
     font-size: 12px;
     justify-content: center;
     margin:  10px 0 0 10px;
-
     white-space: nowrap;
     &:hover{
       color: white;
@@ -109,15 +131,12 @@
     border : 0;
     box-sizing: border-box;
     margin:  10px 0 0 10px;
-
     transition: background ease .5s;
     &:active,&:focus{
       border-width: 0;
       box-shadow: none;
-
       color: white;
     }
-
     &:hover{
         background-color:darken(get($colors,primary), 10%);
         color: white;
@@ -125,6 +144,15 @@
   }
 }
 
+.card{
+  transition: transform 0.5s ease;
+  backface-visibility: hidden;
+  transform: translateZ(0);
+  &:hover{
+        transform: scale(1.02);
+        backface-visibility: hidden;
+  }
+}
 
 .favoriIcon {
     color: #eab30c;

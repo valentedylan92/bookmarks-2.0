@@ -26,3 +26,18 @@ section.route-section {
   top: 0;
   left: 0;
 }
+
+.container{
+  &__title{
+    font-weight: bold;
+    width:100%;
+    font-size: 35px;
+    text-align: left;
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+    margin-bottom: 50px;
+    @include media(small){
+      font-size: 28px;
+    }
+  }
+}
